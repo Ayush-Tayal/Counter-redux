@@ -49,7 +49,7 @@ const Shop = () => {
                 <button className="btn btn-primary mx-4" onClick={()=>{dispatch(add(1))}}>+</button>
             </div>
 
-            <button className="btn btn-primary" onClick={handleSignOut}>Sign Out</button>
+            <button className="btn btn-primary my-4" onClick={handleSignOut}>Sign Out</button>
         </div> :
         
         <div className="text-center">

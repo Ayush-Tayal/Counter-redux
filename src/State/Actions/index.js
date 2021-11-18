@@ -1,18 +1,14 @@
 export const add = (data)=>{
-    return (dispatch)=>{
-        dispatch({
-            type:"addition",
-            payload:data 
-        })
+    return{
+        type:"addition",
+        payload:data 
     }
 }
 
 export const subtract = (data)=>{
-    return (dispatch)=>{
-        dispatch({
-            type:"subtraction",
-            payload:data 
-        })
+    return{
+        type:"subtraction",
+        payload:data 
     }
 }
 
@@ -27,3 +23,22 @@ export const signOut = ()=>{
         type:"signOut"
     }
 }
+
+export const fetchDogData=()=>{
+    return async (dispatch)=>{
+        const data = await fetch("https://dog.ceo/api/breeds/image/random");
+        const response = await data.json();
+        console.log("response is", response);
+        dispatch(saveDogData(response.message));
+    }
+}
+
+export const saveDogData=(data)=>{
+    return {
+        type:"dogImage",
+        payload:data
+    }
+}
+
+
+// const INCREAMETN_COUNT = "addition"

@@ -1,4 +1,5 @@
 import './App.css';
+import Api from './components/Api';
 import Navbar from './components/Navbar';
 import Shop from './components/Shop';
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Navbar/>
       <Shop/>
+      <Api/>
     </>
   );
 }
